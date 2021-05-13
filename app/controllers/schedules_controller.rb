@@ -26,7 +26,7 @@ class SchedulesController < ApplicationController
     @schedule = Schedule.find(params[:id])
     @sub_schedule = SubSchedule.new
     @sub_schedule = SubSchedule.find_by(params[@sub_schedule.id])
-    @sub_schedule = SubSchedule.where(id: params[:id])
+    @sub_schedule = SubSchedule.where(params[:id])
     @comment = Comment.new
     @comment = @schedule.comments.includes(:user)
   end
