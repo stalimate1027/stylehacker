@@ -218,6 +218,14 @@ a {
   margin: 28px 0 40px 0;
 }
 
+.sub_schedule_list{
+  margin-left: 50px;
+}
+
+.sub_schedule_text{
+  margin-left: 10px;
+}
+
 .comments_lists{
   padding-left: 20px;
 }
