@@ -1,6 +1,6 @@
 class SchedulesController < ApplicationController
   def index
-    @schedules = Schedule.all
+    @schedules = Schedule.all.order("created_at DESC")
   end
 
   def new
