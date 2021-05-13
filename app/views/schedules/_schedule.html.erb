@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="card__body">
+    <%= link_to "#{schedule.title}", schedule_path(schedule.id), class: :card__title%>
+    <div class="card__text">
+      <%= "#{schedule.text}" %>
+    </div>
+  </div>
+  <div class="card__summary">
+    <%= "#{schedule.date_id}" %>
+  </div>
+  <div class="card__summary">
+    <%= "#{schedule.importance.name}" %>
+  </div>
+</div>

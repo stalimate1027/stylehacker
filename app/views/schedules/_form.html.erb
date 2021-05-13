@@ -1,0 +1,44 @@
+<%= form_with model: schedule, local: true do |f|%>
+  <div class="field">
+    <%= f.label :title, "Title" %><br />
+    <%= f.text_field :title, id:"prototype_title" %>
+  </div>
+
+  <div class="field">
+    <div class='form-text-wrap'>
+      <label class="form-text">Year</label>
+    </div>
+    <div class='input-limit-wrap'>
+      <%= raw sprintf(
+                  f.date_select(
+                    :date_id,
+                    class:'select-birth',
+                    id:"limit-date",
+                    use_month_numbers: true,
+                    prompt:'--',
+                    start_year: (Time.now.year),
+                    end_year: (Time.now.year + 5),
+                    date_separator: '%s'),
+                  "<p> Month </p>", "<p> Date </p>") + "<p>  </p>" %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= f.label :time_id, "Time" %><br />
+    <%= f.collection_select(:time_id, Limit.all, :id, :name, {}, {class: :form__text, id:"prototype_concept"}) %>
+  </div>
+
+    <div class="field">
+    <%= f.label :importance_id, "Importance" %><br />
+    <%= f.collection_select(:importance_id, Importance.all, :id, :name, {}, {class: :form__text, id:"prototype_concept"}) %>
+  </div>
+
+    <div class="field">
+    <%= f.label :text, "Memo" %><br />
+    <%= f.text_area :text, class: :form__text, id:"prototype_concept" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Save", class: :form__btn  %>
+  </div>
+<% end %>

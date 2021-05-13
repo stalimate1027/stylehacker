@@ -1,4 +1,4 @@
-# stylehacker テーブル設計
+# stylehacker0 テーブル設計
 
 ## users テーブル
 
@@ -20,7 +20,6 @@
 | ------------- | ---------- | ------------------------------ |
 | title         | string     | null: false                    |
 | date_id       | integer    | null: false                    |
-| time_id       | integer    |                                |
 | text          | text       |                                |
 | importance_id | integer    | null: false                    |
 | user          | references | null: false, foreign_key: true |
@@ -54,9 +53,7 @@
 | text         | text       | null: false                    |
 | user         | references | null: false, foreign_key: true |
 | schedule     | references | null: false, foreign_key: true |
-| sub_schedule | references | null: false, foreign_key: true |
 
 ### Association
 - belongs_to :user
 - belongs_to :schedule
-- belongs_to :sub_schedule
