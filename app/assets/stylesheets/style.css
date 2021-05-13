@@ -211,7 +211,7 @@ a {
 }
 
 .prototype__comments{
-  background-color: #f6f6f6;
+  background-color: #f1f8fe;
   padding: 20px;
   margin: 28px 0 40px 0;
 }
@@ -227,7 +227,7 @@ a {
 
 .comment_user{
   font-size: 16px;
-  color: #999;
+  color: #f1f8fe;
   text-decoration: underline;
 }
 

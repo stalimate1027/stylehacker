@@ -9,7 +9,7 @@ class SubSchedulesController < ApplicationController
   def create
     @sub_schedule = SubSchedule.new(sub_schedule_params)
     if @sub_schedule.save
-      redirect_to root_path
+      redirect_to schedule_path(@sub_schedule.schedule.id)
     else
       render :new
     end

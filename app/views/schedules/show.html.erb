@@ -30,8 +30,18 @@
             <%= link_to "Create Task", new_schedule_sub_schedule_path(@schedule.id), class: :nav__btn %>
           </p>
         </div>
-        <div>
-
+        <div class="sub_schedule_lists">
+          <% @sub_schedule.each do |sub_schedule| %>
+            <li class="sub_schedule_list">
+              <%= "#{sub_schedule.title}"%>
+              <%= "#{sub_schedule.date_id}"%>
+              <%= "#{sub_schedule.time_id}"%>
+              <%= "#{sub_schedule.importance.name}"%>
+              <div>
+                <%= "#{sub_schedule.text}"%>
+              </div>
+            </li>
+          <% end %>
         </div>
       </div>
       <div class="prototype__comments">

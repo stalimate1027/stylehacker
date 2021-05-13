@@ -10,4 +10,5 @@ class Importance < ActiveHash::Base
 
   include ActiveHash::Associations
   has_many :schedules
+  has_many :sub_schedules
 end

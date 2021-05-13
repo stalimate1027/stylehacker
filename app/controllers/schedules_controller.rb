@@ -25,6 +25,8 @@ class SchedulesController < ApplicationController
   def show
     @schedule = Schedule.find(params[:id])
     @sub_schedule = SubSchedule.new
+    @sub_schedule = SubSchedule.find_by(params[@sub_schedule.id])
+    @sub_schedule = SubSchedule.where(id: params[:id])
     @comment = Comment.new
     @comment = @schedule.comments.includes(:user)
   end
@@ -48,5 +50,4 @@ class SchedulesController < ApplicationController
   def schedule_params
     params.require(:schedule).permit(:title, :date_id, :time_id, :text, :importance_id).merge(user_id: current_user.id)
   end
-  
 end
