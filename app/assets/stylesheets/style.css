@@ -138,6 +138,7 @@ a {
   flex-wrap: wrap;
   flex-direction: column;
   min-height: calc(100vh - 161px);
+  width: 1024px;
   margin-left: 10px;
 }
 .card {
